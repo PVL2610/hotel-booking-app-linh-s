@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround_homepage"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="670dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:id="@+id/imgacc_position"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/img_accout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pvl"
+                        android:clipToOutline="true"
+                        android:background="@drawable/custom_img">
+                    </ImageView>
+
+                </RelativeLayout>
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:orientation="horizontal">
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:layout_marginLeft="70dp"
+                       android:src="@drawable/vector"
+                       android:layout_gravity="center">
+                   </ImageView>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:textColor="@color/white"
+                       android:textSize="15sp"
+                       android:text="Đà Nẵng, Việt Nam"
+                       android:layout_gravity="center">
+
+                   </TextView>
+
+               </LinearLayout>
+               <ImageView
+                   android:layout_width="32dp"
+                   android:layout_height="40dp"
+                   android:layout_gravity="center"
+                   android:layout_marginRight="10dp"
+                   android:src="@drawable/notification">
+               </ImageView>
+
+           </LinearLayout>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="60dp">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:orientation="horizontal"
+                   android:background="@drawable/custom_search"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginRight="10dp">
+                   <ImageView
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:src="@drawable/search"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="10dp">
+                   </ImageView>
+
+                   <EditText
+                       android:id="@+id/editTextText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="20dp"
+                       android:layout_weight="1"
+                       android:inputType="text"
+                       android:text="Search"
+                       android:textColor="#8B939F"/>
+               </LinearLayout>
+           </RelativeLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="Popular hotels"
+                   android:textColor="@color/white"
+                   android:textSize="20sp"
+                   android:layout_marginLeft="10dp">
+
+               </TextView>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="See all"
+                   android:textColor="#06B3C4"
+                   android:textSize="15sp"
+                   android:layout_marginRight="10dp">
+
+               </TextView>
+           </LinearLayout>
+           <HorizontalScrollView
+               android:layout_width="match_parent"
+               android:layout_height="300dp">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+               </LinearLayout>
+
+           </HorizontalScrollView>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="Nearby hotels"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:layout_marginLeft="10dp">
+
+               </TextView>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="See all"
+                   android:textColor="#06B3C4"
+                   android:textSize="15sp"
+                   android:layout_marginRight="10dp">
+
+               </TextView>
+           </LinearLayout>
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+           </ScrollView>
+
+
+       </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/home">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/tasksquare">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Booking"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heart">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/user">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
