@@ -1,4 +1,4 @@
-package com.example.hotel_booking_app;
+package signin;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,17 +7,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import signin.signin_PopularHotel;
+import com.example.hotel_booking_app.R;
 
 import java.util.List;
 
-public class PopularHotelAdapter extends BaseAdapter {
+public class signin_PopularHotelAdapter extends BaseAdapter {
 
     private Context context;
     private int layout;
-    private List<PopularHotel> popularHotelList;
+    private List<signin_PopularHotel> popularHotelList;
 
-    public PopularHotelAdapter(Context context, int layout, List<PopularHotel> popularHotelList) {
+    public signin_PopularHotelAdapter(Context context, int layout, List<signin_PopularHotel> popularHotelList) {
         this.context = context;
         this.layout = layout;
         this.popularHotelList = popularHotelList;
@@ -54,15 +55,16 @@ public class PopularHotelAdapter extends BaseAdapter {
 
 
         //gán giá trị
-        PopularHotel popularHotel = popularHotelList.get(i);
+        signin_PopularHotel popularHotel = popularHotelList.get(i);
 
         txtTen.setText(popularHotel.getTen());
         txtDiaChi.setText(popularHotel.getDiaChi());
         imgHinh.setImageResource(popularHotel.getHinh());
-        txtDanhGia.setText(popularHotel.getDanhGia());
-        txtSLDanhGia.setText(popularHotel.getSoLuongDanhGia());
+        txtDanhGia.setText(String.valueOf(popularHotel.getDanhGia()));
+        txtSLDanhGia.setText(String.valueOf(popularHotel.getSoLuongDanhGia()));
         txtGia.setText(popularHotel.getGia());
         return view;
     }
+
 }
 

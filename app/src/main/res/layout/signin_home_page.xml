@@ -5,12 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backround_homepage"
-    tools:context=".MainActivity">
+    android:id="@+id/laytout_homepage"
+    tools:context="signin.signin_homepage">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"/>
 
     <ScrollView
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="670dp">
+        android:layout_height="680dp"
+        android:layout_above="@+id/bottom_navigation">
 
        <LinearLayout
            android:layout_width="match_parent"
@@ -25,8 +35,7 @@
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="10dp"
-                    >
+                    android:layout_marginLeft="10dp">
                     <ImageView
                         android:id="@+id/img_accout"
                         android:layout_width="match_parent"
@@ -78,7 +87,7 @@
                    android:layout_width="match_parent"
                    android:layout_height="50dp"
                    android:orientation="horizontal"
-                   android:background="@drawable/custom_search"
+                   android:background="@drawable/signin_custom_search"
                    android:layout_marginTop="5dp"
                    android:layout_marginLeft="10dp"
                    android:layout_marginRight="10dp">
@@ -98,8 +107,9 @@
                        android:layout_marginRight="20dp"
                        android:layout_weight="1"
                        android:inputType="text"
-                       android:text="Search"
-                       android:textColor="#8B939F"/>
+                       android:hint="Search"
+                       android:textColor="#ffffff"
+                       android:textColorHint="#8B939F"/>
                </LinearLayout>
            </RelativeLayout>
 
@@ -124,6 +134,7 @@
                    android:text="See all"
                    android:textColor="#06B3C4"
                    android:textSize="15sp"
+                   android:textStyle="bold"
                    android:layout_marginRight="10dp">
 
                </TextView>
@@ -144,6 +155,7 @@
                android:layout_height="40dp"
                android:orientation="horizontal">
                <TextView
+                   android:id="@+id/nearbyhotels"
                    android:layout_width="0dp"
                    android:layout_height="wrap_content"
                    android:layout_weight="1"
@@ -165,11 +177,13 @@
 
                </TextView>
            </LinearLayout>
-           <ScrollView
+           <LinearLayout
+               android:id="@+id/lvNearbyHotel"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
 
-           </ScrollView>
+           </LinearLayout>
 
 
        </LinearLayout>
@@ -178,77 +192,79 @@
 
     </ScrollView>
 
-    <LinearLayout
-        android:id="@+id/navbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/content"
-        android:orientation="horizontal">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/navbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/content"-->
+<!--        android:orientation="horizontal">-->
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/home">
-            </ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Home"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/tasksquare">
-            </ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Booking"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/heart">
-            </ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Favorite"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/user">
-            </ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Profile"></TextView>
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/home">-->
+<!--            </ImageView>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Home"></TextView>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/tasksquare">-->
+<!--            </ImageView>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="My Booking"></TextView>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/heart">-->
+<!--            </ImageView>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Favorite"></TextView>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/user">-->
+<!--            </ImageView>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="My Profile"></TextView>-->
+<!--        </LinearLayout>-->
 
-    </LinearLayout>
+<!--    </LinearLayout> -->
+
+
 </RelativeLayout>

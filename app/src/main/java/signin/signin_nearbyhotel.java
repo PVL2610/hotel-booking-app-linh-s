@@ -1,15 +1,14 @@
-package com.example.hotel_booking_app;
+package signin;
 
-public class PopularHotel {
+public class signin_nearbyhotel {
     private String Ten;
     private String DiaChi;
-    private String DanhGia;
+    private double DanhGia;
     private int SoLuongDanhGia;
     private String Gia;
-//    private String MoTa;
+    //    private String MoTa;
     private int Hinh;
-
-    public PopularHotel(String ten, String diaChi, String danhGia, int soLuongDanhGia, String gia /* ,String moTa */, int hinh) {
+    public signin_nearbyhotel(String ten, String diaChi, double danhGia, int soLuongDanhGia, String gia /* ,String moTa */, int hinh) {
         Ten = ten;
         DiaChi = diaChi;
         DanhGia = danhGia;
@@ -35,11 +34,11 @@ public class PopularHotel {
         DiaChi = diaChi;
     }
 
-    public String getDanhGia() {
+    public double getDanhGia() {
         return DanhGia;
     }
 
-    public void setDanhGia(String danhGia) {
+    public void setDanhGia(double danhGia) {
         DanhGia = danhGia;
     }
 
@@ -75,4 +74,3 @@ public class PopularHotel {
         Hinh = hinh;
     }
 }
-
